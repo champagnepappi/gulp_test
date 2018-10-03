@@ -23,3 +23,10 @@ gulp.task('copyHTML', function() {
   gulp.src('src/*.html')
   .pipe(gulp.dest('dist'));
 })
+
+//optimize images
+gulp.task('imageMin', ()=>
+  gulp.src('src/images/*')
+  .pipe(imageMin())
+  .pipe(gulp.dest('dist/images'))
+);
