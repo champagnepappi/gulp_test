@@ -38,3 +38,10 @@ gulp.task('minify-js', function() {
   .pipe(uglify())
   .pipe(gulp.dest('dist/js'))
 });
+
+//compile sass
+gulp.task('sass', function() {
+  gulp.src('src/sass/*.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('dist/css'))
+})
