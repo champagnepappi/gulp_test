@@ -31,3 +31,10 @@ gulp.task('imageMin', ()=>
   .pipe(imagemin())
   .pipe(gulp.dest('dist/images'))
 );
+
+//minify js
+gulp.task('minify-js', function() {
+  gulp.src('src/js/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('dist/js'))
+});
