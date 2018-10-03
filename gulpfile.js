@@ -27,6 +27,6 @@ gulp.task('copyHTML', function() {
 //optimize images
 gulp.task('imageMin', ()=>
   gulp.src('src/images/*')
-  .pipe(imageMin())
+  .pipe(imagemin())
   .pipe(gulp.dest('dist/images'))
 );
