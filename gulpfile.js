@@ -56,4 +56,4 @@ gulp.task('concat-js', function() {
   .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('default', ['copyHTML', 'imageMin', 'sass', 'message'])
+gulp.task('default', ['copyHTML', 'imageMin', 'sass', 'message', 'concat-js'])
