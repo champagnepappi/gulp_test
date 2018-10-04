@@ -46,3 +46,5 @@ gulp.task('sass', function() {
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('dist/css'))
 })
+
+gulp.task('default', ['copyHTML', 'imageMin', 'minify-js', 'sass', 'message'])
