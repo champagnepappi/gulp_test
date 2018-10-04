@@ -52,6 +52,7 @@ gulp.task('sass', function() {
 gulp.task('concat-js', function() {
   gulp.src('src/js/*.js')
   .pipe(concat('main.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('dist/js'));
 });
 
