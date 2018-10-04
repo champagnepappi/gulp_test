@@ -46,6 +46,13 @@ gulp.task('sass', function() {
   gulp.src('src/sass/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('dist/css'))
-})
+});
+
+//concat js files into one
+gulp.task('concat-js', function() {
+  gulp.src('src/js/*.js')
+  .pipe(concat('main.js'))
+  .pipe(gulp.dest('dist/js'));
+});
 
 gulp.task('default', ['copyHTML', 'imageMin', 'minify-js', 'sass', 'message'])
