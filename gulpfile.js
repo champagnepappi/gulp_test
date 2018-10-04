@@ -57,3 +57,10 @@ gulp.task('concat-js', function() {
 });
 
 gulp.task('default', ['copyHTML', 'imageMin', 'sass', 'message', 'concat-js'])
+
+gulp.task('watch', function() {
+  gulp.watch('src/js/*.js', ['concat-js']);
+  gulp.watch('src/images/*', ['imageMin']);
+  gulp.watch('src/*.html', ['copyHTML']);
+  gulp.watch('src/sass/*.scss', ['sass']);
+})
